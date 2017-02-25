@@ -7,6 +7,7 @@ package br.org.gdt.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javax.inject.Named;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,6 +25,7 @@ public class Restricao implements Serializable {
     private int idRestricao;
 
     @ManyToOne
+    @Named("trb_id")
     private TermoAbertura termoabertura;
 
     @Column(length = 500)

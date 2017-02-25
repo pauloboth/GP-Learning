@@ -28,7 +28,7 @@ public class Usuario implements Serializable {
     private String status;
     private String dataCadastro;
     private String dataModificacao;
-
+    private int karma;
 //    @OneToOne
 //    private Perfil perfil;
 //
@@ -39,7 +39,7 @@ public class Usuario implements Serializable {
 //    public void setPerfil(Perfil perfil) {
 //        this.perfil = perfil;
 //    }
-    
+
     @ManyToOne
     private Turma turma;
 
@@ -150,11 +150,17 @@ public class Usuario implements Serializable {
         return grupo;
     }
 
+    public int getKarma() {
+        return karma;
+    }
+
+    public void setKarma(int karma) {
+        this.karma = karma;
+    }
+
     public void setGrupo(Grupo grupo) {
         this.grupo = grupo;
     }
-
-    
 
     @Override
     public String toString() {
@@ -182,7 +188,5 @@ public class Usuario implements Serializable {
         }
         return true;
     }
-
-
 
 }
